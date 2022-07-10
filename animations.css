@@ -75,15 +75,15 @@
 .button-hover:active,.credit-hover:active, 
 .button-hover:focus,.credit-hover:focus, 
 .button-hover:hover,.credit-hover:hover{
-    -webkit-transform:scale(1.1);
-    transform:scale(1.1)
+    -webkit-transform:scale(1.01);
+    transform:scale(1.01)
 }
 
 
 /* Icon hover animations
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.icon-hover{
+/* .icon-hover{
     display:inline-block;
     -webkit-transform:perspective(1px) translateZ(0);
     transform:perspective(1px) translateZ(0);
@@ -157,7 +157,7 @@
         -webkit-transform:translateY(0);
         transform:translateY(0)
     }
-}
+} */
 
 
 /* Footer hover animations

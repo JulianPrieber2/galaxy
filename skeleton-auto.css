@@ -57,39 +57,153 @@
   html is set to 62.5% so that all the REM measurements throughout Skeleton
   are based on 10px sizing. So basically 1.5rem = 15px :) */
   
-  html {
-    font-size: 100%; }
+  body {
+    background:
+    linear-gradient(
+      rgba(147, 147, 147, 0.4), 
+      rgba(147, 147, 147, 0.4)
+    ),
+    url("https://i.pinimg.com/originals/6f/2d/34/6f2d34fe6c8746c56c14fbc55308ef99.jpg");
+    background-size: cover;
+    color: #fff;
+  }
 
-  /* Dark/light mode detection (comment this section out and use the one below for a fixed background color) */
-    @media (prefers-color-scheme: dark) {
-      body {
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 400;
-        background: #292929;
-        background: radial-gradient(circle, #292929 28%, #1b1b1b 100%);
-        font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #FFFFFF; }
-    }
-    @media (prefers-color-scheme: light) {
-      body {
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 400;
-        background: #F1F1F1;
-        font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #222; }
-    }
-
-/* Use this for a fixed background color instead of dark and light mode
-    body {
-      font-size: 18px;
-      line-height: 24px;
-      font-weight: 400;
-      font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
-    }
-*/
+  /* leaf animations */
+  
+  .parallax-background {position:relative;top:-50px;width:100%;text-align: right;}
+  
+  .parallax-background div {
+      display: inline-block;
+      width: 200px;
+      height: 150px;
+      background: linear-gradient(to bottom right, #ffade5, #ff86b9);
+      transform: skew(20deg);
+      border-radius: 5% 40% 70%;
+      box-shadow: inset 0px 0px 1px #222;
+      border: 1px solid rgb(255, 191, 242);
+      z-index: 1;
+      -webkit-animation: falling 5s 0s infinite;
+  }
+  
+  .parallax-background div:nth-of-type(2n) { -webkit-animation: falling2 5s 0s infinite; }
+  .parallax-background div:nth-of-type(3n) { -webkit-animation: falling3 5s 0s infinite; }
+  
+  .parallax-background div:before {
+    position: absolute;
+    content: '';
+    top: 117px;
+    right: 9px;
+    height: 27px;
+    width: 32px;
+    transform: rotate(49deg);
+    border-radius: 0% 15% 15% 0%;
+    border-top: 1px solid #ff7bda;
+    border-bottom: 1px solid #ff7bda;
+    border-left: 0px solid #ff7bda;
+    border-right: 1px solid #ff7bda;
+    background: linear-gradient(to right, #ff64e8, #ff8ff6);
+    z-index: 1;
+  }
+  
+  .parallax-background div:after {
+    content: '';
+    height: 125px;
+    width: 10px;
+    background: linear-gradient(to right, #f5acfff2, #db6fff);
+    display: block;
+    transform: rotate(125deg);
+    position: absolute;
+    left: 85px;
+    border-radius:50%;
+  }
+  
+  
+  .parallax-background div:nth-of-type(n)    { height:23px; width:30px; }
+  .parallax-background div:nth-of-type(n):before { width:7px; height:5px; top:17px; right:1px; }
+  .parallax-background div:nth-of-type(n):after { width:2px; height:17px; left: 12px; top:0px; }
+  
+  .parallax-background div:nth-of-type(2n+1)    { height:11px; width:16px; }
+  .parallax-background div:nth-of-type(2n+1):before { width:4px; height:3px; top:7px; right:0px; }
+  .parallax-background div:nth-of-type(2n+1):after { width:2px; height:6px; left: 5px; top:1px; }
+  
+  .parallax-background div:nth-of-type(3n+2)  { height:17px; width:23px; }
+  .parallax-background div:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; right:1px; }
+  .parallax-background div:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; left:8px; }
+  
+  .parallax-background div:nth-of-type(n)   { -webkit-animation-delay: 1.9s;}
+  .parallax-background div:nth-of-type(2n)  { -webkit-animation-delay: 3.9s;}
+  .parallax-background div:nth-of-type(3n)  { -webkit-animation-delay: 2.3s;}
+  .parallax-background div:nth-of-type(4n)  { -webkit-animation-delay: 4.4s;}
+  .parallax-background div:nth-of-type(5n)  { -webkit-animation-delay: 5s;  }
+  .parallax-background div:nth-of-type(6n)  { -webkit-animation-delay: 3.5s;}
+  .parallax-background div:nth-of-type(7n)  { -webkit-animation-delay: 2.8s;}
+  .parallax-background div:nth-of-type(8n)  { -webkit-animation-delay: 1.5s;}
+  .parallax-background div:nth-of-type(9n)  { -webkit-animation-delay: 3.3s;}
+  .parallax-background div:nth-of-type(10n) { -webkit-animation-delay: 2.5s;}
+  .parallax-background div:nth-of-type(11n) { -webkit-animation-delay: 1.2s;}
+  .parallax-background div:nth-of-type(12n) { -webkit-animation-delay: 4.1s;}
+  .parallax-background div:nth-of-type(13n) { -webkit-animation-delay: 1s;  }
+  .parallax-background div:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
+  .parallax-background div:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
+  
+  .parallax-background div:nth-of-type(n)    { background: linear-gradient(to bottom right, #ffa6d1, #ffc1e3); }
+  .parallax-background div:nth-of-type(2n+2)  { background: linear-gradient(to bottom right, #ff6daa, #f596ff); }
+  .parallax-background div:nth-of-type(4n+1)  { background: linear-gradient(to bottom right, rgb(255, 149, 246), #ffa1b4); }
+  
+  .parallax-background div:nth-of-type(n)    { opacity: .7;}
+  .parallax-background div:nth-of-type(3n+1)  { opacity: .5;}
+  .parallax-background div:nth-of-type(3n+2)  { opacity: .3;}
+  
+  .parallax-background div:nth-of-type(n)    {transform: rotate(180deg);}
+  
+  
+  .parallax-background div:nth-of-type(n) { -webkit-animation-timing-function:ease-in-out;}
+  
+  @-webkit-keyframes falling {
+      
+      0% {
+          -webkit-transform:
+              translate3d(300,0,0)
+              rotate(0deg);
+      }
+      
+      100% {
+          -webkit-transform:
+              translate3d(-350px,700px,0)
+              rotate(90deg);
+          opacity: 0;
+      }
+  }
+  
+  @-webkit-keyframes falling3 {
+       0% {
+          -webkit-transform:
+              translate3d(0,0,0)
+              rotate(-20deg);
+      }
+      
+      100% {
+          -webkit-transform:
+              translate3d(-230px,640px,0)
+              rotate(-70deg);
+          opacity: 0;
+      }
+  }
+  
+  @-webkit-keyframes falling2 {
+       0% {
+          -webkit-transform:
+              translate3d(0,0,0)
+              rotate(90deg);
+      }
+      
+      100% {
+          -webkit-transform:
+              translate3d(-400px,680px,0)
+              rotate(0deg);
+          opacity: 0;
+      }
+  }
   
   /* Typography
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -112,11 +226,11 @@
   /* Links
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   a {
-    color: #0085FF; 
+    color: #6deeff; 
     text-decoration: none;
   }
   a:hover {
-    color: #0085FF; }
+    color: #6deeff; }
   
   .spacing {
     padding: 0 10px;
@@ -178,32 +292,7 @@
     border-width: 0;
     border-top: 1px solid #E1E1E1; }
   
-    @media (prefers-color-scheme: dark) {
-  /* ===== Scrollbar CSS ===== */
-    /* Firefox */
-    * {
-      scrollbar-width: thin;
-      scrollbar-color: #171a1d #31363b;
-    }
-  
-    /* Chrome, Edge, and Safari */
-    *::-webkit-scrollbar {
-      width: 8px;
-    }
-  
-    *::-webkit-scrollbar-track {
-      background: #31363b;
-    }
-  
-    *::-webkit-scrollbar-thumb {
-      background-color: #171a1d;
-      border-radius: 30px;
-      border: 3px none #ffffff;
-    }
-   
-  }
-    
-    @media (prefers-color-scheme: light) {
+
   /* ===== Scrollbar CSS ===== */
     /* Firefox */
     * {
@@ -225,8 +314,7 @@
       border-radius: 30px;
       border: 3px none #ffffff;
     }
-  
-  }
+
   
 /* Credit footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -247,13 +335,8 @@
 */
 
 /* Switches text color for credit footer for dark/light mode */
-@media (prefers-color-scheme: dark) {
+
   .credit-txt-clr{
-      color: #FFF !important;
+      color: #ffffff !important;
   }
-}
-@media (prefers-color-scheme: light) {
-  .credit-txt-clr{
-      color: #100a26 !important;
-  }
-}
+
